@@ -1,7 +1,26 @@
-var topics, newButton, newTopic, queryURL, flowerName, results, flowerDiv, rating, gifShow, state;
+var topics,
+ newButton, 
+ newTopic,  
+ state,
+ flowerName, 
+ results, 
+ flowerDiv, 
+ queryURL,
+ rating,
+  gifShow;
+  
 
 
-topics = ["BubbleGum", "Fallout", "Yoga", "Bathtub", "Stephen King" ,"Hiking", "Piano", "Flower", "Strawberry"];
+topics = 
+["BubbleGum",
+ "Fallout", 
+ "Yoga",
+  "Bathtub", 
+  "Stephen King" ,
+  "Hiking",
+   "Piano", 
+   "Flower", 
+   "Strawberry"];
 
 //make, clear but.
 function makeButtons() {
@@ -98,7 +117,7 @@ function animateGif(){
     // $(".gif").on("click", function() { ?????? 
     
     
-    state = $(this).attr("data-state");
+state = $(this).attr("data-state");
 
 	//move between still and animated 
 	if (state === "still") {
@@ -110,5 +129,10 @@ function animateGif(){
 		$(this).attr("data-state", "still");
 	}
 }
+
+//calling click function
+makeButtons();
+$(document).on("click", ".flower", displayGifs);
+$(document).on("click", ".gif", animateGif);
 
 

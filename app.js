@@ -118,7 +118,7 @@ function animateGif(){
     // $(".gif").on("click", function() { ?????? 
     
     
-state = $(this).attr("data-state");
+var state = $(this).attr("data-state");
 
 	//move between still and animated 
 	if (state === "still") {

@@ -97,7 +97,6 @@ function displayGifs(){
 
             //give attr to gifs
             
-
             
             gifShow = $("<img data-state='still' src='" + results[j].images.fixed_height_still.url + "'>");
             gifShow.attr("data-animate", results[j].images.fixed_height.url);
@@ -111,7 +110,12 @@ function displayGifs(){
 	});
 };
 
-//start or stop gif//
+//calling click function
+makeButtons();
+$(document).on("click", ".flower", displayGifs);
+$(document).on("click", ".gif", animateGif);
+
+//pausing gif//
 function animateGif(){
    
    
@@ -131,9 +135,6 @@ var state = $(this).attr("data-state");
 	}
 }
 
-//calling click function
-makeButtons();
-$(document).on("click", ".flower", displayGifs);
-$(document).on("click", ".gif", animateGif);
+
 
 

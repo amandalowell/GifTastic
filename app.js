@@ -36,7 +36,7 @@ function makeButtons() {
 	};
 };
 
-//letting user make but.
+//letting user add
 $("#add-flower").on("click", function(event){
 	event.preventDefault();
 	if ($("#user-input").val() !== ""){

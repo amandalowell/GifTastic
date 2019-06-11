@@ -119,12 +119,14 @@ $(document).on("click", ".gif", animateGif);
 function animateGif(){
    
    
-    // $(".gif").on("click", function() { ?????? 
+    // $(".gif").on("click", function() { ?????? class example did not work either..switched out
     
     
 var state = $(this).attr("data-state");
 
-	//move between still and animated 
+    //move between still and animated  
+    //need to get pausing to work
+
 	if (state === "still") {
 		$(this).attr("src", $(this).attr("data-animate"));
 		$(this).attr("data-state", "animate");

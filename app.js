@@ -91,3 +91,24 @@ function displayGifs(){
 	});
 };
 
+//start or stop gif//
+function animateGif(){
+   
+   
+    // $(".gif").on("click", function() { ?????? 
+    
+    
+    state = $(this).attr("data-state");
+
+	//move between still and animated 
+	if (state === "still") {
+		$(this).attr("src", $(this).attr("data-animate"));
+		$(this).attr("data-state", "animate");
+	}
+	else {
+		$(this).attr("src", $(this).attr("data-still"));
+		$(this).attr("data-state", "still");
+	}
+}
+
+
